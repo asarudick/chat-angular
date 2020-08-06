@@ -1,0 +1,47 @@
+@import "../../styles/typography"
+@import "../../styles/colors"
+
+:host
+  background-color: white
+  display: flex
+  font-family: var(--font)
+  color: var(--gray)
+
+form
+  display: flex
+  flex: 1
+  align-items: stretch
+  justify-content: center
+
+input
+  flex: 1
+  display: flex
+  margin: 30px
+  margin-right: 15px
+  padding-left: 30px
+  font-size: 20px
+  border: 1px solid var(--light-gray)
+  border-radius: 4px
+  box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.1)
+
+input[disabled]
+  background-color: var(--light-gray)
+
+button
+  width: 100px
+  display: flex
+  margin: 30px
+  margin-left: 15px
+  border: 0
+  padding: 0
+  background-color: white
+  text-align: center
+  align-items: center
+  justify-content: center
+  color: #4A90E2
+  font-size: 24px
+  font-weight: bold
+  cursor: pointer
+
+button:disabled
+  color: lighten(#4A90E2, 20)

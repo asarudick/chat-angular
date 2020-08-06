@@ -1,0 +1,10 @@
+<div *ngIf="(pending$ | async) == true" class="container">
+  <h2>Loading...</h2>
+</div>
+<div *ngIf="(pending$ | async) == false" class="container">
+  <div class="left-pane">
+    <app-control-pane></app-control-pane>
+    <app-rooms [selection]="selectedRoom$ | async" [rooms]="rooms$ | async"></app-rooms>
+  </div>
+  <app-room [selection]="selectedRoom$ | async"></app-room>
+</div>

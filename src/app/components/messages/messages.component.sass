@@ -1,0 +1,62 @@
+@import "../../styles/typography"
+@import "../../styles/colors"
+
+:host
+  background-color: var(--light-gray)
+  display: flex
+  flex: 1
+  flex-direction: column
+  align-items: stretch
+  justify-content: center
+  box-shadow: inset 0px 9px 8px -12px #666, inset 0px -9px 8px -12px #666
+  font-family: var(--font)
+  font-size: 18px
+  overflow: auto
+
+.author
+  color: var(--gray)
+
+ul
+  display: flex
+  flex: 1
+  flex-direction: column
+  padding: 30px
+  margin: 0
+
+li
+  list-style: none
+  flex: none
+  justify-content: flex-start
+  margin-bottom: 30px
+  display: flex
+  align-items: flex-start
+  flex-direction: column
+
+  .message
+    border-radius: 40px
+    background-color: white
+    color: black
+    padding: 20px 40px
+    max-width: 45%
+    margin-bottom: 10px
+    display: flex
+    flex-direction: column
+
+  .add-reaction
+    width: 25px
+    height: 25px
+
+  // Reactions
+  .frowny
+    background-image: url(/assets/frowny.svg)
+  .default
+    background-image: url(/assets/addReaction.svg)
+
+
+li.self
+  align-items: flex-end
+
+  .message
+      background-color: var(--red)
+      color: white
+      justify-content: flex-end

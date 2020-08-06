@@ -1,0 +1,4 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit($event)" (keyup.enter)="onSubmit($event)">
+  <input type="text" placeholder="Type your username..." required formControlName="name">
+  <button type="submit" [disabled]="!loginForm.valid">Join the chat!</button>
+</form>

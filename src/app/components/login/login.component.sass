@@ -1,0 +1,39 @@
+@import "../../styles/colors.sass"
+@import "../../styles/typography.sass"
+
+:host
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100%
+  flex: 1
+
+form
+  flex: none
+  max-height: 300px
+  display: flex
+  flex-direction: column
+  min-width: 364px
+
+input, button
+  flex: 1
+  margin: 10px
+  font-size: 16px
+  font-family: var(--font)
+
+input
+  border: 1px solid #DDD
+  border-radius: 2px
+  padding: 10px 20px
+  color: var(--gray)
+
+button
+  border: 1px solid var(--red)
+  border-radius: 2px
+  color: #FFF
+  padding: 10px 20px
+  background-color: var(--red)
+
+button:disabled
+  background-color: lighten($red, 20)
+  border: 1px solid lighten($red, 20)

@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let message of messages; index as i; trackBy: getMessageId" [ngClass]="{ 'self': message.name === (user$ | async).name }">
+    <div class="message">{{ message.message }}<div class="add-reaction" (click)="setReaction(message)" [ngClass]="{'frowny': getReaction(message) == 1, 'default': getReaction(message) == 0 }"></div></div>
+    <div *ngIf="message.name !== (user$ | async).name" class="author">{{ message.name }}</div>
+  </li>
+</ul>

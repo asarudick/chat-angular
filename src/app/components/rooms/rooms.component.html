@@ -1,0 +1,3 @@
+<ul>
+  <li *ngFor="let room of rooms" (click)="select(room)" [ngClass]="{'selected': isSelected(room) }"><p>{{ room.name }}</p></li>
+</ul>

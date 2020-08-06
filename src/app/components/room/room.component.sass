@@ -1,0 +1,33 @@
+@import "../../styles/typography"
+@import "../../styles/colors"
+
+:host
+  align-items: stretch
+  justify-content: center
+  display: flex
+
+.container
+  align-items: stretch
+  justify-content: center
+  display: flex
+  flex: 1
+  flex-direction: column
+
+.unselected
+  align-items: center
+  flex: 1
+  display: flex
+  justify-content: center
+  font-family: var(--font)
+  font-size: 36px
+  color: var(--gray)
+  background-color: var(--light-gray)
+
+app-room-header
+  height: 130px
+
+app-messages
+  flex: 1
+
+app-message-composer
+  height: 120px

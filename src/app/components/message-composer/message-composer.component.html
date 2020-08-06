@@ -1,0 +1,4 @@
+<form [formGroup]="sendMessageForm" (ngSubmit)="onSubmit($event)" (keypress.enter)="onSubmit($event)">
+  <input type="text" placeholder="Type a message..." required formControlName="message" [disabled]="(result$ | async).pending" #input>
+  <button type="submit" [disabled]="!sendMessageForm.valid || (result$ | async).pending">Send</button>
+</form>
